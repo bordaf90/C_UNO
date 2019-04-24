@@ -1,0 +1,58 @@
+#include<stdio.h>
+
+
+float funcion (float x,float y,char z);
+
+main(){
+
+float x,y, res;
+char z,r;
+
+printf (" Desea hacer cálculos? ");  // Afuera del ciclo while
+scanf("%c",&r);
+
+    while (r=='s') {
+    printf("ingrese x: ");
+    scanf("%f",&x);
+    fflush(stdin);
+    printf("ingrese y: ");
+    scanf("%f",&y);
+    fflush(stdin);
+    printf("ingrese operacion ");
+    fflush(stdin);
+    scanf("%c",&z);
+    
+
+    res=funcion(x,y,z);
+
+    printf("\n El resultado es %f ",res);
+    
+    printf (" Desea hacer cálculos? "); // Adentro del ciclo
+    scanf("%s",&r);
+    }
+
+
+}
+
+
+
+
+
+float funcion (float x,float y,char z)  
+
+{ float resu;
+
+switch(z)
+
+    {case 's': resu=x+y;
+    break;
+    case 'r': resu=x-y;
+    break;
+    case 'm': resu=x*y;
+    break;
+    case 'd': resu=x/y;
+    break;}
+
+return resu;
+
+}
